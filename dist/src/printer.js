@@ -148,7 +148,8 @@ function printNodeNoParens(path, options, print) {
                 }
                 const canBreakLine = node.init.some(n => n != null &&
                     n.type !== 'TableConstructorExpression' &&
-                    n.type !== 'FunctionDeclaration');
+                    n.type !== 'FunctionDeclaration' &&
+                    n.type !== 'CallExpression');
                 return docBuilder_1.group(docBuilder_1.concat([
                     docBuilder_1.group(docBuilder_1.concat(left)),
                     docBuilder_1.group(docBuilder_1.concat([
